@@ -25,20 +25,51 @@
     
 }
 
+
+
 -(void)showPaperRabbit:(id)sender
 {
     RabbitViewController *controller = [[RabbitViewController alloc] init];
-    controller.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    NSLog(@"call presentViewController");
     [self presentViewController:controller animated:YES completion:^{
         NSLog(@"after presentViewController");
     }];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+
     UIButton *sleepBut = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     sleepBut.frame = CGRectMake(60, 100, 200, 30);
     [sleepBut setTitle:@"睡覺的白彼得" forState:UIControlStateNormal];

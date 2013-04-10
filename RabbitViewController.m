@@ -30,12 +30,55 @@
     NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+-(void)back:(id)sender
+{
+    NSLog(@"call dismissViewControllerAnimated");
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"after dismissViewControllerAnimated");
+    }];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+
     self.view.backgroundColor = [UIColor yellowColor];
+    
+    UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    [self.view addSubview:navBar];
+    navBar.tintColor = [UIColor orangeColor];
+    UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle:@"白彼得寫真"];
+
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Back"
+                                   style:UIBarButtonItemStylePlain
+                                   target:self action:@selector(back:)];
+    navItem.leftBarButtonItem = backButton;
+    
+    [navBar pushNavigationItem:navItem animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning
