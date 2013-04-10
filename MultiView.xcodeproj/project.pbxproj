@@ -23,6 +23,10 @@
 		A6117EC71714F5820012160B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6117EA21714F5820012160B /* Foundation.framework */; };
 		A6117ECF1714F5820012160B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6117ECD1714F5820012160B /* InfoPlist.strings */; };
 		A6117ED21714F5820012160B /* MultiViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6117ED11714F5820012160B /* MultiViewTests.m */; };
+		A6117EE01715A0BE0012160B /* RabbitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6117EDF1715A0BE0012160B /* RabbitViewController.m */; };
+		A6117EE41715A1660012160B /* paperRabbit.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A6117EE11715A1660012160B /* paperRabbit.tiff */; };
+		A6117EE51715A1660012160B /* sleepRabbit.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A6117EE21715A1660012160B /* sleepRabbit.tiff */; };
+		A6117EE61715A1660012160B /* eatRabbit.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A6117EE31715A1660012160B /* eatRabbit.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,11 @@
 		A6117ECE1714F5820012160B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A6117ED01714F5820012160B /* MultiViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiViewTests.h; sourceTree = "<group>"; };
 		A6117ED11714F5820012160B /* MultiViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiViewTests.m; sourceTree = "<group>"; };
+		A6117EDE1715A0BE0012160B /* RabbitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RabbitViewController.h; path = ../RabbitViewController.h; sourceTree = "<group>"; };
+		A6117EDF1715A0BE0012160B /* RabbitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RabbitViewController.m; path = ../RabbitViewController.m; sourceTree = "<group>"; };
+		A6117EE11715A1660012160B /* paperRabbit.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = paperRabbit.tiff; sourceTree = "<group>"; };
+		A6117EE21715A1660012160B /* sleepRabbit.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = sleepRabbit.tiff; sourceTree = "<group>"; };
+		A6117EE31715A1660012160B /* eatRabbit.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eatRabbit.tiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,8 @@
 		A6117EA61714F5820012160B /* MultiView */ = {
 			isa = PBXGroup;
 			children = (
+				A6117EDE1715A0BE0012160B /* RabbitViewController.h */,
+				A6117EDF1715A0BE0012160B /* RabbitViewController.m */,
 				A6117EAF1714F5820012160B /* AppDelegate.h */,
 				A6117EB01714F5820012160B /* AppDelegate.m */,
 				A6117EB81714F5820012160B /* MainStoryboard.storyboard */,
@@ -130,6 +141,9 @@
 		A6117EA71714F5820012160B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A6117EE11715A1660012160B /* paperRabbit.tiff */,
+				A6117EE21715A1660012160B /* sleepRabbit.tiff */,
+				A6117EE31715A1660012160B /* eatRabbit.tiff */,
 				A6117EA81714F5820012160B /* MultiView-Info.plist */,
 				A6117EA91714F5820012160B /* InfoPlist.strings */,
 				A6117EAC1714F5820012160B /* main.m */,
@@ -236,6 +250,9 @@
 				A6117EB51714F5820012160B /* Default@2x.png in Resources */,
 				A6117EB71714F5820012160B /* Default-568h@2x.png in Resources */,
 				A6117EBA1714F5820012160B /* MainStoryboard.storyboard in Resources */,
+				A6117EE41715A1660012160B /* paperRabbit.tiff in Resources */,
+				A6117EE51715A1660012160B /* sleepRabbit.tiff in Resources */,
+				A6117EE61715A1660012160B /* eatRabbit.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +290,7 @@
 				A6117EAD1714F5820012160B /* main.m in Sources */,
 				A6117EB11714F5820012160B /* AppDelegate.m in Sources */,
 				A6117EBD1714F5820012160B /* ViewController.m in Sources */,
+				A6117EE01715A0BE0012160B /* RabbitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

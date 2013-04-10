@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RabbitViewController.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,11 @@
 
 -(void)showPaperRabbit:(id)sender
 {
-    
+    RabbitViewController *controller = [[RabbitViewController alloc] init];
+    controller.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self presentViewController:controller animated:YES completion:^{
+        NSLog(@"after presentViewController");
+    }];
 }
 
 - (void)viewDidLoad
