@@ -9,10 +9,24 @@
 #import "RabbitViewController.h"
 
 @interface RabbitViewController ()
-
+{
+    RabbitType rabbitType;
+}
 @end
 
 @implementation RabbitViewController
+
+-(id)initWithType:(RabbitType)type
+{
+    self = [super init];
+    
+    if(self)
+    {
+        rabbitType = type;
+    }
+    
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -59,6 +73,29 @@
     }];
 }
 
+-(void)addRabbitPic
+{
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 44, 320,
+                                        [UIScreen mainScreen].bounds.size.height-20-44)];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    switch (rabbitType) {
+        case SLEEP_RABBIT:
+            imageView.image = [UIImage imageNamed:@"sleepRabbit.tiff"];
+            break;
+        case EAT_RABBIT:
+            imageView.image = [UIImage imageNamed:@"eatRabbit.tiff"];
+            break;
+        case PAPER_RABBIT:
+            imageView.image = [UIImage imageNamed:@"paperRabbit.tiff"];
+            break;
+        default:
+            break;
+    }
+    [self.view addSubview:imageView];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -78,6 +115,8 @@
     navItem.leftBarButtonItem = backButton;
     
     [navBar pushNavigationItem:navItem animated:YES];
+    
+    [self addRabbitPic];
 
 }
 

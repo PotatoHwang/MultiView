@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef NS_ENUM(int, RabbitType) {
+    SLEEP_RABBIT,
+    EAT_RABBIT,
+    PAPER_RABBIT
+};
+
 @interface RabbitViewController : UIViewController
+
+-(id)initWithType:(RabbitType)type;
 
 @end

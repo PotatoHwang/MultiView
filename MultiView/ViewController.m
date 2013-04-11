@@ -17,19 +17,27 @@
 
 -(void)showSleepRabbit:(id)sender
 {
-    
+    RabbitViewController *controller = [[RabbitViewController alloc] initWithType:SLEEP_RABBIT];
+    NSLog(@"call presentViewController");
+    [self presentViewController:controller animated:YES completion:^{
+        NSLog(@"after presentViewController");
+    }];
 }
 
 -(void)showEatRabbit:(id)sender
 {
-    
+    RabbitViewController *controller = [[RabbitViewController alloc] initWithType:EAT_RABBIT];
+    NSLog(@"call presentViewController");
+    [self presentViewController:controller animated:YES completion:^{
+        NSLog(@"after presentViewController");
+    }];
 }
 
 
 
 -(void)showPaperRabbit:(id)sender
 {
-    RabbitViewController *controller = [[RabbitViewController alloc] init];
+    RabbitViewController *controller = [[RabbitViewController alloc] initWithType:PAPER_RABBIT];
     NSLog(@"call presentViewController");
     [self presentViewController:controller animated:YES completion:^{
         NSLog(@"after presentViewController");
